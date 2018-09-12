@@ -1,5 +1,5 @@
-var router = require("./router.js");
-var http = require('http');
+const router = require("./router.js");
+const http = require('http');
 http.createServer(function (request, response){
     router.home(request, response);
     router.user(request, response);

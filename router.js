@@ -1,7 +1,7 @@
-var Profile = require("./profile.js");
-var renderer = require("./renderer.js");
-var querystring = require("querystring");
-var commonHeaders = { 'Content-Type':'text/html'}
+const Profile = require("./profile.js");
+const renderer = require("./renderer.js");
+const querystring = require("querystring");
+const commonHeaders = { 'Content-Type':'text/html'}
 function home(request, response){
     if(request.url === "/"){
         if(request.method.toLowerCase() === "get"){
@@ -46,6 +46,7 @@ function home(request, response){
            
         }
     }
-
-module.exports.home = home;
-module.exports.user = user;
+    module.exports = {
+        home:  home,
+        user: user
+    }

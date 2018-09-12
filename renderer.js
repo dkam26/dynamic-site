@@ -1,4 +1,4 @@
-fs = require("fs");
+const fs = require("fs");
 
 function mergeValues(values, content) {
     for(var key in values){
